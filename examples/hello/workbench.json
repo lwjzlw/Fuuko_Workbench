@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "example-workbench",
+  "name": "示例工作台",
+  "version": "0.1.0",
+  "requires": {"host_api": 1},
+  "description": "独立的标准库示例，演示发现、启动、状态和正常关闭。",
+  "category": "工具",
+  "launch": {
+    "command": ["{python}", "hello_app.py", "--serve", "--data-dir", "{data_dir}"],
+    "cwd": "."
+  },
+  "url": {"runtime": "{data_dir}/runtime.json"},
+  "health": {"type": "runtime", "path": "{data_dir}/runtime.json"},
+  "open": ["tab", "window"],
+  "stop": {"type": "wbkit", "allow_force": false}
+}

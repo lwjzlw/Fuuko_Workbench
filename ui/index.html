@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="wb-token" content="{{WB_TOKEN}}">
+  <title>风子工作台</title>
+  <link rel="icon" id="favicon" href="/_shared/assets/fuuko-round.png">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="/_shared/fuuko.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip-link" href="#panel-home">跳到主要内容</a>
+<div class="workspace">
+  <aside class="sidebar" aria-label="主导航">
+    <div class="sidebar-top">
+      <a class="brand" href="#home" title="回到首页">
+        <img id="brand-avatar" src="/_shared/assets/fuuko-avatar.png" alt="" width="36" height="36">
+        <span class="brand-text"><span id="brand-name">风子工作台</span><small>FUUKO WORKSPACE</small></span>
+      </a>
+      <button type="button" id="sidebar-toggle" class="icon-button sidebar-toggle" aria-label="收起侧栏" title="收起侧栏"></button>
+    </div>
+    <button type="button" class="quick-open" id="quick-open" title="快速打开（Ctrl+K）">
+      <span data-icon="search"></span><span class="label">快速打开…</span><kbd>Ctrl K</kbd>
+    </button>
+    <div class="sidebar-scroll">
+      <div class="sidebar-label">浏览</div>
+      <nav class="main-nav" id="category-nav" aria-label="分类"></nav>
+      <div class="sidebar-label open-label" id="open-label" hidden>已打开<span class="hint">Alt+数字</span></div>
+      <div class="open-list" id="tablist" role="tablist" aria-label="已打开的页面" aria-orientation="vertical"></div>
+    </div>
+    <div class="sidebar-bottom">
+      <nav class="main-nav" id="manage-nav" aria-label="控制"></nav>
+      <div class="local-state">
+        <span class="service" title="本机服务的连接状态">
+          <span id="service-dot" class="status-dot on" aria-hidden="true"></span>
+          <span id="service-text">服务在线</span>
+        </span>
+        <button type="button" id="theme" class="icon-button" aria-label="切换主题"></button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="offline-banner" id="offline-banner" role="alert" hidden>
+      <span data-icon="activity"></span>
+      <span>本机服务暂时没有响应，正在自动重试…已打开的页面不受影响。</span>
+      <button type="button" class="btn small" id="offline-retry">立即重试</button>
+    </div>
+    <header class="topbar">
+      <div class="breadcrumbs" id="breadcrumbs"><span>风子工作台</span><span class="crumb-sep">/</span><strong>首页</strong></div>
+      <div class="topbar-actions" id="topbar-actions">
+        <button type="button" class="btn subtle" id="refresh" title="重新扫描已保存的目录，找出新放进去的工作台"><span data-icon="refresh"></span>扫描</button>
+      </div>
+      <div class="topbar-actions" id="tab-actions" hidden>
+        <button type="button" class="icon-button" id="tab-reload" title="重新载入" aria-label="重新载入"><span data-icon="refresh"></span></button>
+        <button type="button" class="icon-button" id="tab-window" title="在新窗口打开" aria-label="在新窗口打开"><span data-icon="window"></span></button>
+        <button type="button" class="icon-button danger-hover" id="tab-stop" title="关闭它的服务" aria-label="关闭它的服务" hidden><span data-icon="power"></span></button>
+        <span class="topbar-sep" aria-hidden="true"></span>
+        <button type="button" class="btn subtle" id="tab-close" title="关闭页签（Ctrl+W）"><span data-icon="close"></span>关闭页签</button>
+      </div>
+    </header>
+
+    <section id="panel-home" class="view home" role="tabpanel" aria-labelledby="home-title" tabindex="-1">
+      <div class="page-heading" id="page-heading">
+        <div class="heading-text">
+          <p class="eyebrow" id="home-eyebrow">Fuuko Workspace</p>
+          <h1 id="home-title">风子工作台</h1>
+          <p class="heading-desc" id="home-desc"></p>
+        </div>
+      </div>
+      <div id="errors" role="alert"></div>
+      <div id="groups"></div>
+    </section>
+    <div id="panels"></div>
+  </main>
+</div>
+
+<dialog id="palette" class="palette" aria-label="快速打开">
+  <div class="palette-search">
+    <span data-icon="search"></span>
+    <input id="palette-input" type="text" autocomplete="off" spellcheck="false" placeholder="输入名称、分类或操作…"
+      role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list">
+    <kbd>Esc</kbd>
+  </div>
+  <ul id="palette-list" class="palette-list" role="listbox" aria-label="结果"></ul>
+  <div class="palette-foot">
+    <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 打开</span>
+    <span><kbd>Alt</kbd>+<kbd>数字</kbd> 切换页签</span><span><kbd>Ctrl</kbd>+<kbd>W</kbd> 关闭页签</span>
+  </div>
+</dialog>
+
+<div class="profile-menu" id="profile-menu" role="menu" aria-label="名字与头像" hidden>
+  <button type="button" role="menuitem" data-profile="rename"><span data-icon="file"></span>修改名字…</button>
+  <button type="button" role="menuitem" data-profile="avatar"><span data-icon="image"></span>更换头像…</button>
+  <div class="menu-sep" role="separator"></div>
+  <button type="button" role="menuitem" data-profile="reset-avatar"><span data-icon="refresh"></span>恢复默认头像</button>
+  <button type="button" role="menuitem" data-profile="reset-name"><span data-icon="refresh"></span>恢复默认名字</button>
+</div>
+<input type="file" id="avatar-file" accept="image/png,image/jpeg,image/webp,image/gif,image/bmp" hidden>
+
+<dialog id="profile-dialog" class="profile-dialog" aria-labelledby="profile-title">
+  <form method="dialog" id="profile-form">
+    <h2 id="profile-title"></h2>
+    <div class="profile-body" id="profile-body"></div>
+    <p class="profile-error" id="profile-error" role="alert"></p>
+    <div class="dialog-actions">
+      <button type="submit" class="btn" value="cancel" formnovalidate>取消</button>
+      <button type="submit" class="btn primary" value="ok" id="profile-ok">保存</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-message">
+  <form method="dialog">
+    <div class="dialog-body">
+      <span class="dialog-icon" id="confirm-icon" aria-hidden="true"></span>
+      <div>
+        <h2 id="confirm-title"></h2>
+        <p id="confirm-message"></p>
+      </div>
+    </div>
+    <div class="dialog-actions">
+      <button type="submit" class="btn" value="cancel" id="confirm-cancel">取消</button>
+      <button type="submit" class="btn primary" value="ok" id="confirm-ok">确定</button>
+    </div>
+  </form>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>

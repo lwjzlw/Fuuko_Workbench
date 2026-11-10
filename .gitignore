@@ -1,0 +1,39 @@
+# Machine-specific entry adapters and historical work evidence.
+/apps/
+/work/
+/agent_records/
+/STATUS.md
+/docs/发布架构与接入协议.md
+/ui/fuuko.ico
+/shared/assets/fuuko-avatar.png
+/shared/assets/fuuko-round.png
+/shared/assets/fuuko.ico
+/release/
+/AGENTS.md
+/.codex/
+/.claude/
+
+# Runtime data and build products do not belong in the source repository.
+__pycache__/
+*.py[cod]
+.venv/
+*.tmp
+*.bak
+*.log
+/shared/host/bin/
+/shared/host/vendor/
+/dist/
+/data/
+/local-data/
+/runtime.json
+/registry.json
+/settings.json
+/.env
+/.env.*
+/profile.json
+/profile/
+
+# Generic release icons are maintained public assets.
+!/shared/assets/fuuko-avatar.png
+!/shared/assets/fuuko-round.png
+!/shared/assets/fuuko.ico

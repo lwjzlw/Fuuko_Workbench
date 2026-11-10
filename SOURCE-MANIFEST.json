@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "project": "fuuko",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 81,
+      "sha256": "6d06ed97d99006c3f1c1f45eb57eff31db0673e7f12e84ec8bfaa8da1d2e5788"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 701,
+      "sha256": "dc8fdf40498a522e49c0889b16542ab6527464538e5b94ba485ecea430814342"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 674,
+      "sha256": "91913c2f895d1ca6a60fc81ef811737e237e5e598c3393c6d5008fd301f559a9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5722,
+      "sha256": "b67675bc94df44fffa52fb61be6b663f20621d19b0969fb0d0a672fbee255012"
+    },
+    {
+      "path": "control.py",
+      "bytes": 12986,
+      "sha256": "c8454dce4cd9bda90e63de5f1bb54b80f2484d5cd4eb97a98ee709377b08f810"
+    },
+    {
+      "path": "docs/workbench-protocol.md",
+      "bytes": 6546,
+      "sha256": "9cb9e86d77eed16962f3c9d5123431bcc33c460043f0a5aa8062b8a9c4785537"
+    },
+    {
+      "path": "examples/hello/README.md",
+      "bytes": 687,
+      "sha256": "9620133e70b0293e2f18e9c8535c3dbb2bada31828dccb92a267250a695f0069"
+    },
+    {
+      "path": "examples/hello/hello_app.py",
+      "bytes": 4993,
+      "sha256": "83d13716101b5bdbee1ac0d99dfb54c83f0c1834b700a1b3cb8a9869cfb4582c"
+    },
+    {
+      "path": "examples/hello/workbench.json",
+      "bytes": 572,
+      "sha256": "8fe88762f44c3a72c5d39ea5bdaab92b8ac77dd32042f8eac6ee07fef4ee9270"
+    },
+    {
+      "path": "fuuko_app.py",
+      "bytes": 18264,
+      "sha256": "7ebf188f830bcd58bbfc5ff792dbe97ebafe842c80c018c0359f9e89229b4099"
+    },
+    {
+      "path": "layout.py",
+      "bytes": 5171,
+      "sha256": "eb76d285702ebdff7313d08c8af9e3242123b14270f9bb9803e03b790976540f"
+    },
+    {
+      "path": "registration.py",
+      "bytes": 20120,
+      "sha256": "fda5c159527ca1066395d4b54056c52d1a3dd908942965b89fba7c838827e3aa"
+    },
+    {
+      "path": "registry.py",
+      "bytes": 20122,
+      "sha256": "f5fce6d9b63390559caa3e0a56c30b17cfb6e067d33c97a43f761d8a5cd01ab6"
+    },
+    {
+      "path": "scripts/package_release.py",
+      "bytes": 5591,
+      "sha256": "5eefc23ce8bc88dc4fbfb1c1c4155b380a3d0eedfc06679c1590fea59c579b75"
+    },
+    {
+      "path": "scripts/release_support.py",
+      "bytes": 7704,
+      "sha256": "1e28633290ebbb2f926e13bfb305ca868c3834dc3b4dbfa0dba854e8382821b7"
+    },
+    {
+      "path": "shared/README.md",
+      "bytes": 1726,
+      "sha256": "124a70d85201a47823fd71dbeca4dbfbc7e234121a3d776414e90d965d252bbd"
+    },
+    {
+      "path": "shared/__init__.py",
+      "bytes": 83,
+      "sha256": "2bfba41bddfe01965e21aa1e34ba007c988e1bc82ec208b3f4e07be38fa7964c"
+    },
+    {
+      "path": "shared/assets/fuuko-avatar.png",
+      "bytes": 1317,
+      "sha256": "d6b374bb55135ad1a2a72e4c60f782d6685ec2b19e83a760c2f9a6c12923157a"
+    },
+    {
+      "path": "shared/assets/fuuko-round.png",
+      "bytes": 1317,
+      "sha256": "d6b374bb55135ad1a2a72e4c60f782d6685ec2b19e83a760c2f9a6c12923157a"
+    },
+    {
+      "path": "shared/assets/fuuko.ico",
+      "bytes": 2776,
+      "sha256": "c879ef57dcff375c5151ddfb246e9880f5746b5cc32d200f5ecedbca70ef867d"
+    },
+    {
+      "path": "shared/fuuko.css",
+      "bytes": 15109,
+      "sha256": "566ceca9c6f722a84b6c6f356062a385aaf9e1a472fc595d560bd4076157c787"
+    },
+    {
+      "path": "shared/host/FuukoHost.cs",
+      "bytes": 23445,
+      "sha256": "ee24e22137a006525688ca44565a71ced652a0f2eee4f9c82b1b1739d9ae8901"
+    },
+    {
+      "path": "shared/host/FuukoHost.exe.config",
+      "bytes": 161,
+      "sha256": "34d367e429d5d424930ba9dd0f1cd1d41f8d05de66487ac8159b97bf0cc701a4"
+    },
+    {
+      "path": "shared/host/app.manifest",
+      "bytes": 844,
+      "sha256": "1810ff57621f95424952dff11278c9447dfb143680e820d8ff742d78c83e3089"
+    },
+    {
+      "path": "shared/host/build.ps1",
+      "bytes": 4373,
+      "sha256": "95899c51711926f3059584a3e0473aaf37cc8dd2b4ea0d3089403d8a2143e226"
+    },
+    {
+      "path": "shared/wbkit.js",
+      "bytes": 7205,
+      "sha256": "780f11b749d2f6268713729c3a1951c973089b8c5d6ae734d312798c1e247fc4"
+    },
+    {
+      "path": "shared/wbkit.py",
+      "bytes": 24289,
+      "sha256": "3d41778c19c8a7518e9c5a14a5a59aa9c50cec12b23e9ea41e1063c1cd973998"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 13647,
+      "sha256": "78b623be279488923c0e31e0dd4fda756652c7f6cec4548f71bceee6315e9179"
+    },
+    {
+      "path": "tests/test_distribution.py",
+      "bytes": 9482,
+      "sha256": "ac9fba08200c7483805e40bc6a69eec2050156df8be322db0394f70f0a563b47"
+    },
+    {
+      "path": "tests/test_fuuko.py",
+      "bytes": 19631,
+      "sha256": "bd73a8ccf10e405b2edd0dc6a4198940e211b9a2d2e5070f7506f363e5a43183"
+    },
+    {
+      "path": "tests/test_registry.py",
+      "bytes": 23224,
+      "sha256": "ae484f8ca837dddb0b03d260dd6035fb7b92d48298caf7b99eee532adcb77fb1"
+    },
+    {
+      "path": "ui/app.css",
+      "bytes": 32006,
+      "sha256": "21be9dce2e89c81a3369c4fe4e13df834b92cd44e2da8a0857860d81ae79c40a"
+    },
+    {
+      "path": "ui/app.js",
+      "bytes": 73988,
+      "sha256": "127052f301bd9ef365817797f3a9b416a5582b4a435ff99fc96252f9610477ed"
+    },
+    {
+      "path": "ui/icon.svg",
+      "bytes": 262,
+      "sha256": "22a2a82536756602611e017bce61785f3a703047bee25d0f0c548469a61bb5b3"
+    },
+    {
+      "path": "ui/index.html",
+      "bytes": 6999,
+      "sha256": "7e7638676cf158b20761af0cf26ec3f8945be97cdfab604ca5a934be4d44137d"
+    },
+    {
+      "path": "ui/theme.js",
+      "bytes": 691,
+      "sha256": "82767ed04fda4f1028e11cc20760f8f97b08c0b0fda5e0080f32d38c01b783dd"
+    }
+  ]
+}
