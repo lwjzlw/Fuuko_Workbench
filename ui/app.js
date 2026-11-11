@@ -836,7 +836,7 @@ async function loadRegistry() {
 function registrySection() {
   const disabled = registryBusy || !registryState;
   const roots = el('textarea', { id: 'registry-roots', rows: 3, spellcheck: 'false', disabled,
-    placeholder: '例如：D:\\Tools\\Workbench',
+    placeholder: '例如：D:\\Workbenches',
     'data-focus': 'registry-roots', 'aria-describedby': 'registry-roots-note',
     oninput: (event) => {
       rootsDraft = event.target.value;

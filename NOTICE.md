@@ -1,7 +1,4 @@
-# 来源与分发
+# 第三方组件
 
-风子工作台的项目许可证尚未指定。公开源码本身不等于授予开源许可；发布者应在选择许可证后将相应文件加入仓库。
-
-源码发布工具使用项目内 `ui/icon.svg` 的几何图形生成通用 PNG/ICO 图标；不会读取或发布本机自定义头像。用户后续设置的名字、头像、工作台清单与窗口配置只保存在用户数据目录。
-
-可选窗口依赖 Microsoft Edge WebView2 Runtime。构建脚本使用固定版本和 SHA-256 的 Microsoft.Web.WebView2 SDK，并将 SDK 自带许可复制到构建输出。SDK 与 Runtime 的许可归其原权利方，不由本项目重新授权。
+- **WebView2**：可选的独立窗口程序使用 Microsoft Edge WebView2。构建脚本会下载固定版本的 Microsoft.Web.WebView2 SDK，并把它自带的许可文件一并放进构建结果；SDK 与 Runtime 的许可归 Microsoft 所有。
+- **图标**：仓库里的应用图标是代码生成的几何图形，你可以在程序里换成自己的头像（在左上角头像上连点五下）。
